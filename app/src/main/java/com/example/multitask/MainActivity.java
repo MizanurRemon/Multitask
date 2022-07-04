@@ -11,10 +11,10 @@ import android.webkit.WebViewClient;
 public class MainActivity extends AppCompatActivity {
 
     WebView webView1, webView2, webView3, webView4;
-    String url = "https://www.textverified.com/";
-    String url3 = "https://smspinverify.com/";
+    String url = "https://www.google.com/";
     String url2 = "https://www.duckduckgo.com";
-    String url4 = "https://www.yandex.com/";
+    String url4 = "https://google.com/";
+    String url3 = "https://www.yandex.com/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
         load_webview(webView1, url);
 
-        //load_webview(webView2, url2);
+        load_webview(webView2, url2);
 
         load_webview(webView3, url3);
 
-        //load_webview(webView4, url4);
+        load_webview(webView4, url4);
 
     }
 
@@ -60,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void init_view() {
         webView1 = findViewById(R.id.webView1);
-        //webView2 = findViewById(R.id.webView2);
+        webView2 = findViewById(R.id.webView2);
         webView3 = findViewById(R.id.webView3);
-        //webView4 = findViewById(R.id.webView4);
+        webView4 = findViewById(R.id.webView4);
     }
 }
