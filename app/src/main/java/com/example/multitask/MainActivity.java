@@ -10,26 +10,30 @@ import android.webkit.WebViewClient;
 
 public class MainActivity extends AppCompatActivity {
 
-    WebView webView1, webView2,webView3,webView4;
-    String url = "https://www.google.com/";
+    WebView webView1, webView2, webView3, webView4;
+    String url = "https://www.textverified.com/";
+    String url3 = "https://smspinverify.com/";
+    String url2 = "https://www.duckduckgo.com";
+    String url4 = "https://www.yandex.com/";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
+
         init_view();
-        
-        load_webview(webView1);
 
-        load_webview(webView2);
+        load_webview(webView1, url);
 
-        load_webview(webView3);
+        //load_webview(webView2, url2);
 
-        load_webview(webView4);
+        load_webview(webView3, url3);
+
+        //load_webview(webView4, url4);
 
     }
 
-    private void load_webview(WebView webshow) {
+    private void load_webview(WebView webshow, String url) {
         webshow.getSettings().setLoadsImagesAutomatically(true);
         webshow.getSettings().setJavaScriptEnabled(true);
         // webshow.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
@@ -55,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init_view() {
-        webView1= findViewById(R.id.webView1);
-        webView2 = findViewById(R.id.webView2);
-        webView3= findViewById(R.id.webView3);
-        webView4 = findViewById(R.id.webView4);
+        webView1 = findViewById(R.id.webView1);
+        //webView2 = findViewById(R.id.webView2);
+        webView3 = findViewById(R.id.webView3);
+        //webView4 = findViewById(R.id.webView4);
     }
 }
