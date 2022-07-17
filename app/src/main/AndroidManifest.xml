@@ -18,6 +18,9 @@
         android:theme="@style/Theme.Multitask"
         tools:targetApi="31">
         <activity
+            android:name=".Pop_up_activity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
